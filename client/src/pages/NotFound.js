@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 const NotFound = () => {
   return (
-    <div className="not-found">
+    <div className="not-found-page">
       <h1>404</h1>
-      <h2>Sidan hittades inte</h2>
-      <p>Sidan du letar efter finns inte eller har flyttats.</p>
-      <Link to="/" className="btn btn-primary">Gå till startsidan</Link>
+      <h2>Page Not Found</h2>
+      <p>The page you are looking for doesn't exist or has been moved.</p>
+      <Link to="/" className="btn btn-primary">Return to Home</Link>
     </div>
   );
 };

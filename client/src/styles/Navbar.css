@@ -1,7 +1,11 @@
 .navbar {
-  background-color: #343a40;
+  background-color: #222;
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 30px; /* Space for the price ticker */
+  position: relative;
+  z-index: 100;
+  width: 100%;
 }
 
 .navbar .container {
@@ -15,11 +19,20 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
 }
 
 .navbar-nav {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
@@ -30,10 +43,30 @@
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF483; /* Yellow accent color */
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: white;
+  color: #FFF483; /* Yellow accent color */
+}
+
+.nav-link:hover:after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {

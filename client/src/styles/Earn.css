@@ -1,0 +1,134 @@
+.earn-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.earn-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #D1954E; /* Orange accent color */
+}
+
+.earn-intro {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.market-overview, .earning-strategies {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.market-overview h2, .earning-strategies h2 {
+  color: #D1954E;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #FFF483;
+  padding-bottom: 0.5rem;
+}
+
+.commodities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.commodity-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.commodity-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.commodity-card.up:before {
+  background-color: #FFF483; /* Yellow accent for up trend */
+}
+
+.commodity-card.down:before {
+  background-color: #D1954E; /* Orange accent for down trend */
+}
+
+.commodity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.commodity-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.change {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.change.up {
+  color: #4caf50; /* Green for up trend */
+}
+
+.change.down {
+  color: #f44336; /* Red for down trend */
+}
+
+.description {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.strategy {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.strategy:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.strategy h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.strategy p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .commodities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  .market-overview, .earning-strategies {
+    padding: 1.5rem;
+  }
+}

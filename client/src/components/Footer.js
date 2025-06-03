@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Industriell Revolution. Alla rättigheter förbehållna.</p>
+        <p>&copy; {new Date().getFullYear()} Incomatic. All rights reserved.</p>
       </div>
     </footer>
   );

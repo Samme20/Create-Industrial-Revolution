@@ -1,0 +1,50 @@
+.price-ticker-container {
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 30px; /* Fixed height */
+}
+
+.price-ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker-scroll 30s linear infinite;
+  width: max-content;
+  position: absolute;
+}
+
+/* Improved animation for continuous looping */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-item {
+  padding: 8px 20px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.price-change {
+  margin-left: 5px;
+}
+
+.price-change.up {
+  color: #00FF00; /* Vibrant green for positive change */
+}
+
+.price-change.down {
+  color: #FF0000; /* Vibrant red for negative change */
+}
